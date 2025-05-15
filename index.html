@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fichamento | LABit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header>
+    <div class="navbar" id="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo LABit">
+        <h1>LABit</h1>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#"><i data-lucide="home"></i> INICIO</a></li>
+          <li><a href="#"><i data-lucide="search"></i> PESQUISAS</a></li>
+          <li><a href="#"><i data-lucide="mail"></i> CONTATO</a></li>
+          <li><a href="#"><i data-lucide="file-text"></i> ARTIGOS</a></li>
+          <li><a href="#"><i data-lucide="users"></i> SOBRE NÓS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-container">
+      <span class="breadcrumbs">
+        <a href="#">Artigos</a> / <a href="#">Fichamentos</a> / <a href="#">LLMs</a>
+      </span>
+
+      <h1>Large Language Models (LLMs): survey, technical frameworks, and future challenges</h1>
+      <p class="info">Autor: <strong>Pranjal Kumar</strong> &nbsp;|&nbsp; Ano: <em>2024</em> &nbsp;|&nbsp; Revista: <em>Artificial Intelligence Review</em></p>
+
+      <div class="article-intro">
+        <p>O artigo intitulado <em>"Large Language Models (LLMs): survey, technical frameworks, and future challenges"</em>, elaborado pelo pesquisador Pranjal Kumar e publicado na revista <em>Artificial Intelligence Review</em> em agosto de 2024 oferece uma visão completa sobre os modelos de linguagem de grande escala (LLMs). O objetivo central é apresentar uma análise técnica e crítica das evoluções, utilizações e dificuldades inerentes ao progresso desses modelos, que hoje formam a base de muitos sistemas de inteligência artificial.</p>
+      </div>
+
+      <div class="section">
+        <h2>Abordagem Técnica e Fundamentos</h2>
+        <p>O estudo ressalta desde o início que os MLAs representam uma mudança fundamental na maneira como as máquinas lidam com a linguagem humana. Kumar organiza sua abordagem de forma clara, usando uma comparação com construções em camadas para descrever a estrutura técnica dos modelos. Isso inclui a explicação de mecanismos internos, como autoatenção, embeddings posicionais e a arquitetura Transformer, que transformou a área do processamento de linguagem natural (PLN). Ele também examina as fases de aprendizado desses modelos, como o pré-treinamento e o ajuste fino, cruciais para a adaptação dos MLAs a tarefas específicas.</p>
+      </div>
+
+      <div class="section">
+        <h2>Aplicações e Desafios</h2>
+        <p>Além da base técnica, o estudo explora em profundidade as aplicações práticas desses modelos em vários setores, como biomedicina, educação, pesquisa científica, auxílio jurídico, criação de código e até em sistemas multimodais que combinam texto e imagem. Apesar dos avanços notáveis, o autor adverte sobre desafios sérios que acompanham essa evolução, como a interpretabilidade dos modelos, a existência de preconceitos algorítmicos, as preocupações com a privacidade dos dados e o alto custo computacional, um dos fatores mais críticos ao pensar em sustentabilidade e escalabilidade.</p>
+        
+        <div class="figure-container">
+          <img src="fig1.png" alt="Taxonomia dos componentes técnicos de LLMs" class="figure-image" />
+          <p class="figure-caption">Figura 1 – Classificação visual dos principais componentes dos MLAs</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Tecnologias e Métricas de Avaliação</h2>
+        <p>Quanto às tecnologias abordadas, o autor realiza uma comparação de diversos modelos renomados, como GPT-3, GPT-4, BARD, PaLM, Megatron-Turing NLG, Jurassic-1 Jumbo e LLaMA. Ele também detalha as principais estruturas de desenvolvimento, como PyTorch, TensorFlow e HuggingFace Transformers, que suportam o aprendizado e a aplicação dos modelos.</p>
+
+        <p>No que se refere às técnicas de embeddings, Kumar destaca tanto abordagens tradicionais como Word2Vec, GloVe e FastText, quanto modelos contextuais mais recentes, como ELMo e CoVe, mostrando como cada técnica impacta a representação semântica da linguagem.</p>
+
+        <p>A avaliação é feita com métricas que são debatidas com atenção, dependendo da tarefa. Em sistemas de perguntas e respostas (QA), a precisão e o raciocínio lógico são cruciais. Para classificar textos e reconhecer entidades, o F1-score é muito usado. Ao gerar texto, BLEU e perplexidade são os indicadores principais. Nos modelos multimodais, o IOU serve para segmentação.</p>
+      </div>
+
+      <div class="section">
+        <h2>Comparações Técnicas</h2>
+        <p>Duas tabelas mostram mais detalhes. A Tabela 1 resume os modelos principais, com o ano de lançamento, número de parâmetros, arquitetura e dados usados no treinamento. A Tabela 2 compara técnicas de embeddings, dividindo-as por tipo (contagem, previsão ou contexto) e mostrando seus pontos fortes e fracos.</p>
+        
+        <div class="tables-container">
+          <div class="table-wrapper">
+            <h3>Tabela 1 – Visão Geral de Modelos LLMs</h3>
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>Ano</th>
+                  <th>Parâmetros</th>
+                  <th>Arquitetura</th>
+                  <th>Dataset (GB/TB)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>GPT-3</td>
+                  <td>2020</td>
+                  <td>175B</td>
+                  <td>Decoder</td>
+                  <td>570GB</td>
+                </tr>
+                <tr>
+                  <td>BERT</td>
+                  <td>2018</td>
+                  <td>110M</td>
+                  <td>Encoder</td>
+                  <td>3.3TB</td>
+                </tr>
+                <tr>
+                  <td>PaLM</td>
+                  <td>2022</td>
+                  <td>540B</td>
+                  <td>Decoder</td>
+                  <td>n/a</td>
+                </tr>
+                <tr>
+                  <td>Gopher</td>
+                  <td>2021</td>
+                  <td>280B</td>
+                  <td>Decoder</td>
+                  <td>10.5TB</td>
+                </tr>
+              </tbody>
+              <caption>Tabela construída com base na Tabela 6 do artigo de Kumar (2024), p. 20</caption>
+            </table>
+          </div>
+
+          <div class="table-wrapper">
+            <h3>Tabela 2 – Comparativo de Embeddings</h3>
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>Método</th>
+                  <th>Tipo</th>
+                  <th>Vantagem</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Word2Vec</td>
+                  <td>Previsão</td>
+                  <td>Captura semântica com janelas de contexto</td>
+                </tr>
+                <tr>
+                  <td>GloVe</td>
+                  <td>Contagem</td>
+                  <td>Baseado em coocorrência global</td>
+                </tr>
+                <tr>
+                  <td>FastText</td>
+                  <td>Sub-palavra</td>
+                  <td>Trabalha bem com palavras raras e desconhecidas</td>
+                </tr>
+                <tr>
+                  <td>CoVe</td>
+                  <td>Contextual</td>
+                  <td>Captura o contexto dinâmico das sentenças</td>
+                </tr>
+              </tbody>
+              <caption>Tabela construída com base na Seção 5 do artigo de Kumar (2024)</caption>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Conclusões e Impacto</h2>
+        <p>Na parte final, Kumar volta a falar sobre algo importante: os LLMs melhoram muito o desempenho, como as Leis de Escala de Kaplan et al. (2020) já diziam, mas gastam muita energia e prejudicam o meio ambiente. Ele propõe usar métodos mais sustentáveis, como distilação, sparsity, quantização e energia renovável para treinar os modelos.</p>
+        
+        <p>O artigo termina avisando sobre a importância de regras e ética nos LLMs. Kumar cita o relatório Stanford AI Index 2024, que se preocupa com o meio ambiente e com os preconceitos em sistemas de IA generativa. Ele insiste que é preciso ter transparência, responsabilidade social e ética no desenvolvimento dessas tecnologias, ainda mais porque elas são usadas no mundo todo.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2024 LABit. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('active');
+    }
+    lucide.createIcons();
+  </script>
+</body>
+</html>
